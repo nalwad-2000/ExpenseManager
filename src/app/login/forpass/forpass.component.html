@@ -1,0 +1,35 @@
+<mat-grid-list cols="2" rowHeight="2:1.9">
+    <mat-grid-tile>
+        <img src="https://cdn.dribbble.com/users/181980/screenshots/2487893/expense-manager-desktop.gif" width="700px">
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+
+    <mat-card>
+
+            <mat-card-title style="color:rgb(97, 91, 100)">
+                Forgot Password ?
+            </mat-card-title><br>
+
+        <form [formGroup]="forpassForm" (ngSubmit)="sendotp(forpassForm.value); forpassForm.reset()">
+
+            <div class="example-container">
+
+                <div class="form-group">
+                    <mat-form-field appearance="outline">
+                      <mat-label>Rgistered Email</mat-label>
+                      <input matInput id="regemail" type="email" formControlName="regemail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    </mat-form-field>
+                </div>
+
+                <button type="submit" [disabled]="forpassForm.invalid" class="button" (click)="opensnack('OTP Sent','OK')">Send OTP</button>
+
+            </div>
+
+        </form>
+        
+    </mat-card>
+
+    </mat-grid-tile>
+
+</mat-grid-list>

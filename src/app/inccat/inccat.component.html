@@ -1,0 +1,16 @@
+<button class="btn" (click)="openDialog()"><i class="fa fa-plus"></i></button>
+<br><br>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of autoinccatArray">
+            <td>{{data.inccat}}</td>
+            <td>{{data.incdesc}}</td>
+        </tr>   
+    </tbody>
+</table>

@@ -1,0 +1,56 @@
+<mat-grid-list cols="2" rowHeight="2:1.9">
+    <mat-grid-tile>
+        <img src="https://cdn.dribbble.com/users/181980/screenshots/2487893/expense-manager-desktop.gif" width="700px">
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+
+    <mat-card>
+
+            <mat-card-title style="color:rgb(97, 91, 100)">
+                SignUp to Expense-Manager
+            </mat-card-title><br>
+
+        <form [formGroup]="signinform" (ngSubmit)="signin(signinform.value); signinform.reset()">
+
+            <div class="example-container">
+
+                <div class="form-group">
+                    <mat-form-field appearance="outline">
+                      <mat-label>Username</mat-label>
+                      <input matInput id="username" type="text" formControlName="username">
+                    </mat-form-field>
+                </div>
+
+                <div class="form-group">
+                    <mat-form-field appearance="outline">
+                      <mat-label>Password</mat-label>
+                      <input matInput id="password" type="password" formControlName="password">
+                    </mat-form-field>
+                </div>
+
+                <div class="form-group">
+                    <mat-form-field appearance="outline">
+                      <mat-label>E-mail</mat-label>
+                      <input matInput id="email" type="email" formControlName="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    </mat-form-field>
+                </div>
+
+                <div class="form-group">
+                    <mat-form-field appearance="outline">
+                      <mat-label>Phone</mat-label>
+                      <input matInput id="phone" type="phone" formControlName="phone" pattern="[0-9]{10}">
+                    </mat-form-field>
+                </div>
+
+                <button type="submit" [disabled]="signinform.invalid" class="button" (click)="opensnack('SignUp Successfull','OK')">SignUp</button>
+
+            </div>
+
+        </form>
+        
+    </mat-card>
+
+    </mat-grid-tile>
+
+</mat-grid-list>

@@ -1,0 +1,35 @@
+<mat-grid-list cols="2" rowHeight="2:1.9">
+    <mat-grid-tile>
+        <img src="https://cdn.dribbble.com/users/181980/screenshots/2487893/expense-manager-desktop.gif" width="700px">
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+
+    <mat-card>
+
+            <mat-card-title style="color:rgb(97, 91, 100)">
+                <p>Please enter the 4 digit OTP sent to the registered Email.</p>
+            </mat-card-title><br>
+
+        <form [formGroup]="verifyotpForm" (ngSubmit)="verify(verifyotpForm.value); verifyotpForm.reset()">
+
+            <div class="example-container">
+
+                <div class="form-group">
+                    <mat-form-field appearance="outline">
+                      <mat-label>OTP</mat-label>
+                      <input matInput id="otp" type="text" formControlName="otp">
+                    </mat-form-field>
+                </div>
+
+                <button type="submit" [disabled]="verifyotpForm.invalid" class="button">Verify</button>
+
+            </div>
+
+        </form>
+        
+    </mat-card>
+
+    </mat-grid-tile>
+
+</mat-grid-list>

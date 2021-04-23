@@ -1,0 +1,21 @@
+
+<button class="btn" (click)="openDialog()"><i class="fa fa-plus"></i></button>
+<br><br>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Category</th>
+            <th>Amount</th>
+            <th>Person/Company</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of autoincArray">
+            <td>{{data.incdate | date}}</td>
+            <td>{{data.inccat}}</td>
+            <td>{{data.incamt}}</td>
+            <td>{{data.incsrc}}</td>
+        </tr>       
+    </tbody>
+</table>

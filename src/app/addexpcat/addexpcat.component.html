@@ -1,0 +1,25 @@
+<h4>Add New Expense Category</h4><br>
+
+<form [formGroup]="addexpcatform" (ngSubmit)="addexpcat(addexpcatform.value); addexpcatform.reset()">
+  
+  <div class="example-container">
+  
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Category</mat-label>
+        <input matInput id="expcat" type="text" formControlName="expcat" pattern="[A-Za-z\s]+">
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Description</mat-label>
+        <textarea matInput id="expdesc" type="text" formControlName="expdesc"></textarea>
+      </mat-form-field>
+    </div><br>
+
+      <button type="submit" class="button" [mat-dialog-close] [disabled]="addexpcatform.invalid" (click)="opensnack('Expense-Category Added Successfully','OK')">Save</button>
+      <button type="button" class="btn" (click)="cancel()">Cancel</button>
+  </div>    
+</form>
+

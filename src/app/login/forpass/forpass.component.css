@@ -1,0 +1,41 @@
+.mat-grid-tile {
+    background:white;
+  }
+  
+  .mat-card {
+    width: 450px;
+    height: 250px;
+    text-align: center;
+  }
+  
+  .mat-form-field{
+    width: 300px;
+    height: 10px;
+  }
+  
+  .button {
+    background-color: #5299f5; 
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+  }
+
+  .button[disabled]{
+    background-color: rgb(185, 196, 247);
+  }
+
+  .form-group{
+    height:70px;
+    text-align: center;
+  }
+
+
+
+
+
+  

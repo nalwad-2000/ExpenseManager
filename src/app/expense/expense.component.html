@@ -1,0 +1,23 @@
+
+<button class="btn" (click)="openDialog()"><i class="fa fa-plus"></i></button>
+<br><br>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Category</th>
+            <th>Amount</th>
+            <th>Person</th>
+            <th>View Bill</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of autoexpArray">
+            <td>{{data.expdate | date}}</td>
+            <td>{{data.expcat}}</td>
+            <td>{{data.expamt}}</td>
+            <td>{{data.expsrc}}</td>
+            <td><i class="fa fa-eye" style="color: DodgerBlue; cursor:pointer; font-size:25px" (click)="openBill(data.bill)"></i></td>
+        </tr>    
+    </tbody>
+</table>

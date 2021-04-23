@@ -1,0 +1,51 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<h4>Add New Expense</h4><br>
+
+<form [formGroup]="addexpform" (ngSubmit)="addexp(addexpform.value); addexpform.reset()">
+      
+  <div class="example-container">
+
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Date</mat-label>
+        <input matInput [matDatepicker]="picker" id="expdate" type="text" formControlName="expdate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Category</mat-label>
+        <input matInput id="expcat" type="text" formControlName="expcat" pattern="[A-Za-z\s]+">
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Amount</mat-label>
+        <input matInput id="expamt" type="text" formControlName="expamt" pattern="[0-9]+">
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Person</mat-label>
+        <input matInput id="expsrc" type="text" formControlName="expsrc" pattern="[A-Za-z\s]+">
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Bill</mat-label>
+        <ngx-mat-file-input id="bill" type="file" accept="image/*" formControlName="bill" (change)="onchange($event)"></ngx-mat-file-input>
+        <mat-icon matSuffix style="font-size:25px;text-align:center; color:rgb(86, 83, 88)">folder</mat-icon>
+      </mat-form-field> 
+    </div>
+
+    <button type="submit" class="button" [mat-dialog-close] [disabled]="addexpform.invalid" (click)="opensnack('Expenses Added Successfully','OK')">Save</button>
+    <button type="button" class="btn" (click)="cancel()">Cancel</button>
+  </div>    
+</form>
+

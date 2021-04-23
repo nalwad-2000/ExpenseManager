@@ -1,0 +1,54 @@
+.mat-grid-tile {
+  background:white;
+}
+
+.mat-card {
+  width: 450px;
+  height: 350px;
+}
+
+.mat-form-field{
+  width: 300px;
+  height: 10px;
+}
+
+.button {
+  float: right;
+  margin-right: 56px;
+  background-color: #5299f5; 
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+}
+
+.link{
+  float: left;
+  margin-left: 59px;
+  margin-top: 8px;
+}
+
+.forgot {
+  margin-left: 145px;
+}
+
+.form-group{
+  height:70px;
+  text-align: center;
+}
+
+hr.horline{
+  border: 0.1px solid rgb(197, 193, 193);
+  width: 310px;
+  margin-top: 18px;
+}
+
+
+
+
+
+

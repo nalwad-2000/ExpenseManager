@@ -1,0 +1,25 @@
+<h4>Add New Income Category</h4><br>
+
+<form [formGroup]="addinccatform" (ngSubmit)="addinccat(addinccatform.value); addinccatform.reset()">
+  
+  <div class="example-container">
+  
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Category</mat-label>
+        <input matInput id="inccat" type="text" formControlName="inccat" pattern="[A-Za-z\s]+">
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Description</mat-label>
+        <textarea matInput id="incdesc" type="text" formControlName="incdesc"></textarea>
+      </mat-form-field>
+    </div><br>
+
+      <button type="submit" class="button" [mat-dialog-close] [disabled]="addinccatform.invalid" (click)="opensnack('Income-Category Added Successfully','OK')">Save</button>
+      <button type="button" class="btn" (click)="cancel()">Cancel</button>
+  </div>    
+</form>
+
